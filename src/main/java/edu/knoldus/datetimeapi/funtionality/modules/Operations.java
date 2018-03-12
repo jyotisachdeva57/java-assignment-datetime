@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 public class Operations {
 
     public static Long calculateSecondsMGandhiLived(String birthDate, String deathDate) {
-        return Duration.between(LocalDateTime.parse(birthDate), LocalDateTime.parse(deathDate)).toMinutes() * 60;
+        return Duration.between(LocalDateTime.parse(birthDate),
+                LocalDateTime.parse(deathDate)).toMinutes() * 60;
     }
 
     public static List<Integer> calculateLeapYearsTillDate() {
@@ -35,7 +36,7 @@ public class Operations {
         return "TimeZone values  are:" + zonedDateTime.format(TIME_FORMAT);
     }
 
-    public static List<String> returnbirthDaydayOfWeek() {
+    public static List<String> returnbirthDayOfWeek() {
         LocalDate birthDate = LocalDate.of(1994, 6, 17);
         LocalDate todayDate = LocalDate.now();
         List<LocalDate> listOfBirthdays = new ArrayList<>();

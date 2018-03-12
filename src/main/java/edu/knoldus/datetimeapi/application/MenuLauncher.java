@@ -13,6 +13,6 @@ public class MenuLauncher {
         System.out.println("Time by time zone:");
         System.out.println(Operations.returnTimeByTimeZone("Europe/Copenhagen"));
         System.out.println("Birthday day of week:");
-        System.out.println(Operations.returnbirthDaydayOfWeek());
+        System.out.println(Operations.returnbirthDayOfWeek());
     }
 }
