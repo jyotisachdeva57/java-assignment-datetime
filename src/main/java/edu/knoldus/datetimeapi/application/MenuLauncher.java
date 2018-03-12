@@ -2,7 +2,7 @@ package edu.knoldus.datetimeapi.application;
 
 import edu.knoldus.datetimeapi.funtionality.modules.Operations;
 
-public class MenuLanucher {
+public class MenuLauncher {
     public static void main(String args[]) {
         String birthDate = "1869-10-02T00:00:00";
         String deathDate = "1948-01-30T00:00:00";
