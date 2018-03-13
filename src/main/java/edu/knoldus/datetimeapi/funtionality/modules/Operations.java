@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 public class Operations {
 
     public static Long calculateSecondsMGandhiLived(String birthDate, String deathDate) {
@@ -33,7 +32,7 @@ public class Operations {
     public static String returnTimeByTimeZone(String timeZone) {
         ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of(timeZone));
         final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("HH:mm:ss");
-        return "TimeZone values  are:" + zonedDateTime.format(TIME_FORMAT);
+        return zonedDateTime.format(TIME_FORMAT);
     }
 
     public static List<String> returnbirthDayOfWeek() {
