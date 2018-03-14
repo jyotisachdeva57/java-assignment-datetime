@@ -3,17 +3,12 @@ package edu.knoldus.datetimeapi.functionality.modules;
 
 import edu.knoldus.datetimeapi.funtionality.modules.Operations;
 import org.junit.Test;
-
-import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-
 
 public class OperationsTest {
 
@@ -50,9 +45,9 @@ public class OperationsTest {
 
     @Test
     public void shouldReturnListOfBirthDaysTillNow() {
-        List<String> expectedResult = Arrays.asList("FRIDAY", "SATURDAY", "MONDAY", " TUESDAY", "WEDNESDAY", "THURSDAY", " SATURDAY", " SUNDAY", " MONDAY", " TUESDAY", "THURSDAY", " FRIDAY", " SATURDAY", " SUNDAY", " TUESDAY", " WEDNESDAY", " THURSDAY", "FRIDAY", " SUNDAY", "MONDAY", " TUESDAY", " WEDNESDAY", " FRIDAY", " SATURDAY", " SUNDAY");
+        List<String> expectedResult = Arrays.asList("FRIDAY","SATURDAY","MONDAY","TUESDAY","WEDNESDAY", "THURSDAY", "SATURDAY", "SUNDAY", "MONDAY", "TUESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "FRIDAY", "SATURDAY", "SUNDAY");
         List<String> actualResult = Operations.returnbirthDayOfWeek();
-        assertNotEquals("check correct list of birthday's week", actualResult, expectedResult);
+        assertEquals("did not return required list",actualResult,expectedResult);
     }
 
 }
